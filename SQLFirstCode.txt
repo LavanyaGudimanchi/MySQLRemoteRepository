@@ -1,0 +1,20 @@
+-- using databse
+use classicmodels;
+-- give description of the table 
+describe offices ;
+-- select all the records from database.
+select *
+from employees;
+-- gives particular employee record by using employeeNumber .
+select * 
+from employees
+where employeeNumber=1056;
+-- gives count of the records in table.
+select count(*)
+from orders;
+
+select contactfirstname as `FirstName`, contactlastname as `Lastname`from customers;
+
+select contactfirstname as `FirstName`, contactlastname as `Lastname`
+from customers
+order by contactFirstName;
