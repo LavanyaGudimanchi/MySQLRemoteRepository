@@ -9,14 +9,15 @@
  name varchar(255) not null default 'MISSING',
  age int check(age >=0) 
  );
+
  describe employee;
+
  insert into employee (`name`,`age`) values ("Lavanya",40);
  insert into employee (`name`,`age`) values ("Srini",40);
  insert into employee (`name`,`age`) values ("Gayatri",40);
  insert into employee (`name`,`age`) values ("Hemant",40);
  select * from employee 
  
- drop table address; 
  
  create table address (
  address_id int(11) primary key auto_increment ,
@@ -28,6 +29,8 @@
  constraint some_name foreign key(fk_emp_id) references employee(emp_id)  
   );
 select * from address; 
+
  insert  into address (`address_street`,`city`,`state`,`fk_emp_id`)
  values ('123 street','Boston','MA',1);
+delete  from address where address_id=2;
  
